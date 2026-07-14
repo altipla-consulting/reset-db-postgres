@@ -17,15 +17,6 @@ u.pathname = '/postgres'
 let connection = postgres(u.toString())
 
 try {
-  // Close active connections over the target database.
-  await connection`
-    SELECT pg_terminate_backend(pid)
-    FROM pg_stat_activity
-    WHERE datname = ${dbname}
-      AND pid <> pg_backend_pid()
-  `
-
-  // Drop & create.
   await connection`DROP DATABASE IF EXISTS ${dbname}`
   await connection`CREATE DATABASE ${dbname}`
 } finally {

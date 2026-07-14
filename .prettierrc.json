@@ -2,6 +2,5 @@
   "semi": false,
   "singleQuote": true,
   "htmlWhitespaceSensitivity": "ignore",
-  "printWidth": 160,
-  "plugins": ["prettier-plugin-go-template"]
+  "printWidth": 160
 }

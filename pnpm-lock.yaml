@@ -17,6 +17,9 @@ importers:
       postgres:
         specifier: ^3.4.9
         version: 3.4.9
+      typescript:
+        specifier: 5.3.3
+        version: 5.3.3
     devDependencies:
       '@altipla/eslint-config-ts':
         specifier: ^0.9.0
