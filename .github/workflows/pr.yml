@@ -1,0 +1,32 @@
+
+name: PR
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v7
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v6
+      with:
+        version: '11'
+    - name: Setup Node
+      uses: actions/setup-node@v7
+      with:
+        node-version: '24.x'
+        cache: 'pnpm'
+
+    - name: Install deps
+      run: pnpm install
+  
+    - name: Lint
+      run: make lint
