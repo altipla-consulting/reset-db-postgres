@@ -11,14 +11,14 @@ if (!url) {
 }
 
 let u = new URL(url)
-let dbname = '"' + u.pathname.slice(1) + '"'
+let dbname = u.pathname.slice(1)
 u.pathname = '/postgres'
 
 let connection = postgres(u.toString())
 
 try {
-  await connection`DROP DATABASE IF EXISTS ${dbname}`
-  await connection`CREATE DATABASE ${dbname}`
+  await connection`DROP DATABASE IF EXISTS ${connection(dbname)}`
+  await connection`CREATE DATABASE ${connection(dbname)}`
 } finally {
   await connection.end()
 }
