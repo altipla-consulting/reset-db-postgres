@@ -1,0 +1,45 @@
+{
+  "name": "reset-db-postgres",
+  "version": "0.0.0",
+  "description": "Reset a Postgres database to an empty state recreating it if needed.",
+  "main": "dist/cli.js",
+  "bin": "./dist/cli.js",
+  "types": "./dist/cli.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "pkgroll",
+    "lint": "oxlint",
+    "fix": "oxlint --fix",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altipla-consulting/reset-db-postgres.git"
+  },
+  "bugs": {
+    "url": "https://github.com/altipla-consulting/reset-db-postgres/issues"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/altipla-consulting/reset-db-postgres#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Altipla Consulting",
+  "license": "MIT",
+  "devDependencies": {
+    "@altipla/oxlint-config": "^0.1.6",
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.12.9",
+    "oxlint": "^1.73.0",
+    "oxlint-tsgolint": "^0.24.0",
+    "pkgroll": "^2.0.2",
+    "tsx": "^4.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "minimist": "^1.2.8",
+    "postgres": "^3.4.9"
+  }
+}
