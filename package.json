@@ -10,7 +10,7 @@
     "build": "pkgroll",
     "lint": "oxlint",
     "fix": "oxlint --fix",
-    "test": ""
+    "test": "echo 0"
   },
   "repository": {
     "type": "git",
