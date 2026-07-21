@@ -1,6 +1,6 @@
 {
   "name": "reset-db-postgres",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Reset a Postgres database to an empty state recreating it if needed.",
   "main": "dist/cli.js",
   "bin": "./dist/cli.js",
